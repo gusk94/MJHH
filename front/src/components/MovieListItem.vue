@@ -119,7 +119,7 @@ export default {
       axios
         .post(`${SERVER_IP}/api/v1/commentcreate/${moviepk}/`, commentObj)
         .then(() => {
-          // this.$router.go();
+          this.$router.go();
         })
         .catch(error => {
           console.log(error);
