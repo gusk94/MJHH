@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="shadow p-3 mb-2 bg-dark text-white">
+  <div id="app" class="shadow p-3 mb-2 bg-dark text-white" >
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand to="/">Movies</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -29,6 +29,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <img src="./assets/sea.png" alt="" height="300px" id="image">
     <link
       href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Stylish&display=swap"
       rel="stylesheet"
@@ -36,6 +37,18 @@
     <div class="container col-6">
       <router-view />
     </div>
+    <!-- 끝에 -->
+    <div>
+</div>
+<div class="jumbotron" id="jumbo">
+  <h1 class="display-5" >Movie Genre Sorting Site</h1>
+  <p class="lead">김현화 & 백민주</p>
+  <p>For more information visit website</p>
+  <p class="lead">
+    <a class="btn btn-dark" href="https://github.com/paik11012/MJHH" role="button" target="_blank">Learn more</a>
+  </p>
+</div>
+
   </div>
 </template>
 
@@ -79,6 +92,9 @@ export default {
 };
 </script>
 <style>
+#image{
+  width: max-content
+}
 #app {
   font-family: "Stylish", sans-serif;
   /* font-family: 'Noto Serif KR', serif; */
@@ -97,5 +113,9 @@ export default {
 }
 #nav a.router-link-exact-active {
   color: #8dd9ff;
+}
+#jumbo{
+  color:black;
+  background-color: darkgrey;
 }
 </style>

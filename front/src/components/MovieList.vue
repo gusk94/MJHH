@@ -1,5 +1,6 @@
 <template>
   <div class="movie-list">
+    <br>
     <h1>영화 목록</h1>
     <h3>장르 선택</h3>
     <select class="form-control" v-model="genreid" id="select-genre">
@@ -10,6 +11,7 @@
       <MovieListItem v-for="movie in movieList" :movie="movie" :key="movie.id" />
     </div>
   </div>
+  
 </template>
 
 <script>

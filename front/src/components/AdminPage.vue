@@ -17,17 +17,18 @@
         :footer-bg-variant="footerBgVariant"
         :footer-text-variant="footerTextVariant"
       >
-        제목: <input type="text" v-model="title" id="title"> <br>
-        포스터url: <input type="text" v-model="poster_url" id="poster_url"><br>
-        감독: <input type="text" v-model="director" id="director"><br>
-        배우: <input type="text" v-model="actor" id="actor"><br>
-        등급: <input type="text" v-model="grade" id="grade"><br>
-        네이버 평점: <input type="number" step="0.01" v-model="naver_score" id="naver_score"><br>
-        관객: <input type="number" v-model="audience" id="audience"><br>
-        개봉일: <input type="date" v-model="open_date" id="open_date"><br>
-        상영시간: <input type="number" v-model="running_time" id="running_time"><br>
-        장르: <input type="number" v-model="genre" id="genre"><br>
-        상세정보: <textarea name="" id="" cols="40" v-model="description" rows="12"></textarea>&nbsp;&nbsp;
+        제목 <input type="text" v-model="title" id="title"> <br>
+        포스터 URL <input type="text" v-model="poster_url" id="poster_url"><br>
+        감독 <input type="text" v-model="director" id="director"><br>
+        배우 <input type="text" v-model="actor" id="actor"><br>
+        등급 <input type="text" v-model="grade" id="grade"><br>
+        네이버 평점 <input type="number" step="0.01" v-model="naver_score" id="naver_score"><br>
+        관객 <input type="number" v-model="audience" id="audience"><br>
+        개봉일 <input type="date" v-model="open_date" id="open_date"><br>
+        상영시간 <input type="number" v-model="running_time" id="running_time"><br>
+        장르 <input type="number" v-model="genre" id="genre"><br>
+        <p>줄거리</p>
+        <textarea name="" id="" cols="40" v-model="description" rows="12"></textarea>&nbsp;&nbsp;
         <button @click="addMovie" class="btn btn-success">추가</button>
       </b-modal>
     </div>
@@ -136,6 +137,10 @@ export default {
 #select-genre {
   background-color:#343A40 ;
   color: white
+}
+
+#modal-1 {
+  font-family: "Stylish", sans-serif;
 }
 
 </style>
