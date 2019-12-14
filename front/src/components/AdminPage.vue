@@ -34,6 +34,8 @@
     <div class="row mt-5">
       <MovieListItem v-for="movie in movieList" :movie="movie" :key="movie.id" />
     </div>
+    <hr>
+    <AdminUser />
   </div>
 </template>
 
@@ -43,12 +45,14 @@ import { mapState } from "vuex";
 import axios from "axios";
 import router from "@/router";
 import MovieListItem from "@/components/MovieListItemAdmin.vue";
+import AdminUser from "@/components/AdminUser.vue"
 
 
 export default {
   name: "MovieList",
   components: {
-    MovieListItem
+    MovieListItem,
+    AdminUser
   },
   data() {
     return {
@@ -98,8 +102,7 @@ export default {
         "naver_score" : this.naver_score,
         "open_date": this.open_date,
         "audience": this.audience,
-        "genre": this.genre,
-        "liked_users": [1]
+        "genre": this.genre
       }
       axios.post(`${SERVER_IP}/api/v1/create/`, movie)
         .then(response=>{
