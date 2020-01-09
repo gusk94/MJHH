@@ -1,11 +1,9 @@
 <template>
   <div id="app" class="shadow p-3 mb-2 bg-dark text-white" >
-    <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar toggleable="lg" type="dark" variant="dark" id="navbar">
       <b-navbar-brand to="/">Movies</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
-        <!-- <b-navbar-nav>
-        </b-navbar-nav>-->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
             <b-form-input size="sm" class="mr-sm-2" placeholder="Search" v-model="searchObj"></b-form-input>
@@ -29,23 +27,20 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <img src="./assets/sea.png" alt="" height="300px" id="image">
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Stylish&display=swap"
-      rel="stylesheet"
-    />
-    <div class="container col-6">
+    <img height="60%" src="./assets/sea.png" alt="" id="bgimage">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic&display=swap" rel="stylesheet">
+    <div class="container col-10">
       <router-view />
     </div>
     <!-- 끝에 -->
     <div>
 </div>
 <div class="jumbotron" id="jumbo">
-  <h1 class="display-5" >Movie Genre Sorting Site</h1>
+  <h2 class="display-5" >2018-2019 Popular Movies</h2>
   <p class="lead">김현화 & 백민주</p>
   <p>For more information visit website</p>
   <p class="lead">
-    <a class="btn btn-dark" href="https://github.com/paik11012/MJHH" role="button" target="_blank">Learn more</a>
+    <a class="btn btn-dark" href="https://github.com/paik11012/MJHH" role="button" target="_blank">Github</a>
   </p>
 </div>
 
@@ -95,8 +90,12 @@ export default {
 #image{
   width: max-content
 }
+#navbar{
+  font-family: 'Jua', sans-serif;
+}
 #app {
-  font-family: "Stylish", sans-serif;
+  font-family: 'Nanum Gothic', monospace;
+  
   /* font-family: 'Noto Serif KR', serif; */
   min-height: 1000px;
   /* font-family: 'Avenir', Helvetica, Arial, sans-serif; */
@@ -117,5 +116,13 @@ export default {
 #jumbo{
   color:black;
   background-color: darkgrey;
+  height: 280px;
+  font-family: 'Jua', sans-serif;
+  margin-bottom: 2px
+}
+/* 이미지 크기 고정하기 */
+img {
+  max-width: 100%;
+  height: auto;
 }
 </style>
